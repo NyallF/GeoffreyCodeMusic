@@ -1,0 +1,234 @@
+/* General Body Styles */
+body {
+    font-family: 'Playwrite IS', serif; /* Apply the new font to the body */
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5DC; /* Beige background */
+}
+
+/* Header Styles */
+header {
+    background-color: #F5F5DC;
+    color: #8B4513;
+    padding: 10px 20px;
+    text-align: center; /* Centers header text */
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: center; /* Centers nav items horizontally */
+    align-items: center; /* Center vertically */
+    background-color: #8B4513; /* SaddleBrown */
+    padding: 15px;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 24px; /* Header size */
+    color: #FFF8DC; /* Cornsilk */
+    flex-grow: 1; /* Push h1 to the left */
+    text-align: center; /* Center the title */
+}
+
+nav a {
+    margin: 0 20px; /* Spacing around links */
+    text-decoration: none;
+    color: #FFF8DC; /* Cornsilk link color */
+    font-weight: bold; /* Bold text */
+    font-size: 18px; /* Link font size */
+    text-align: center;
+}
+
+nav a:hover {
+    color: #FFD700; /* Golden Yellow on hover */
+}
+
+/* Social Media Styles */
+.social-links, .social-media {
+    justify-content: center;
+    display: flex; /* Ensures icons are flex items to center them */
+}
+
+.social-links a, .social-media a {
+    margin: 0 10px; /* Spacing around social icons */
+    color: #FFF8DC; /* Cornsilk */
+    font-size: 24px; /* Icon size */
+}
+
+.social-links a:hover, .social-media a:hover {
+    color: #FFD700; /* Golden Yellow on hover */
+}
+
+/* Container Styles */
+.container {
+    max-width: 800px;
+    margin: 20px auto; /* Center the container */
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centers all text within the container */
+}
+
+h2 {
+    color: #0b0a09; /* SaddleBrown */
+    margin-top: 20px; /* Space above headings */
+    text-align: center; /* Centers header 2 */
+}
+
+/* Gallery Styles */
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the gallery items vertically */
+    margin-top: 30px; /* Center the gallery
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center gallery items */
+    margin-bottom: 30px;
+    text-align: center; /* Centers text inside the text div */
+    /* Existing styles... */
+/* Add new styles below */
+
+.gallery-item .image img {
+    width: 550px;  /* Example width */
+    height: 550px; /* Example height */
+    object-fit: cover; /* Ensures images cover the area neatly */
+}
+
+}
+
+.image, .text {
+    text-align: center; /* Centers content inside image and text divs */
+}
+
+img {
+    display: block;
+    margin: auto; /* Centers images horizontally */
+    max-width: 100%; /* Ensures images are responsive */
+    height: auto;
+    border-radius: 8px;
+}
+/* Spotify Button Styles */
+.spotify-button {
+    background-color: #040404; /* Spotify brand green */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding around the text */
+    border-radius: 20px; /* Rounded corners for the button */
+    text-decoration: none; /* Removes underline from links */
+    display: inline-flex; /* Aligns icon and text inline */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    font-weight: bold; /* Makes text bold */
+    font-size: 16px; /* Text size */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    margin-top: 30px; /*
+    margin-bottom: 30px; /* Space below the button */
+    margin-bottom: 30px;
+
+}
+
+.spotify-button:hover {
+    background-color: #1ED760; /* Lighter green on hover */
+}
+
+.spotify-button img { /* Spotify logo adjustments */
+    width: 24px; /* Logo width */
+    height: 24px; /* Logo height */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+/* YouTube Button Styles */
+.youtube-button {
+    background-color: #0a0909; /* YouTube brand red */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding around the text */
+    border-radius: 20px; /* Rounded corners for the button */
+    text-decoration: none; /* Removes underline from links */
+    display: inline-flex; /* Aligns icon and text inline */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    font-weight: bold; /* Makes text bold */
+    font-size: 16px; /* Text size */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.youtube-button:hover {
+    background-color: #E62117; /* Darker red on hover */
+}
+
+.youtube-button img { /* YouTube logo adjustments */
+    width: 24px; /* Logo width */
+    height: 24px; /* Logo height */
+    margin-right: 10px; /* Space between logo and text */
+}
+/* Existing styles remain unchanged to ensure desktop layout is not affected */
+
+/* Hamburger Menu Styles */
+.menu-toggle {
+    display: none; /* Hide by default */
+}
+
+/* Navigation Links - visible by default */
+.navigation-links {
+    display: flex;
+}
+
+/* Mobile-specific Styles */
+@media (max-width: 768px) {
+    /* Show the hamburger menu */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px 0;
+    }
+
+    .menu-toggle input {
+        display: none; /* Hide the actual checkbox */
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: #FFF8DC;
+        transition: all 0.3s ease;
+    }
+
+    .menu-toggle input:checked + span {
+        transform: rotate(45deg); /* Animation for X icon */
+    }
+
+    .menu-toggle input:checked ~ span {
+        transform: rotate(-45deg); /* Animation for X icon */
+    }
+
+    /* Toggle navigation links */
+    .menu-toggle input:checked ~ .navigation-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation-links {
+        display: none; /* Hide the links by default */
+        flex-direction: column;
+        width: 100%; /* Full width */
+        text-align: center;
+    }
+
+    .navigation-links a {
+        padding: 10px; /* More touch-friendly padding */
+        width: 100%; /* Full width links for easier touch */
+    }
+}
