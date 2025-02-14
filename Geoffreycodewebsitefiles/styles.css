@@ -1,0 +1,392 @@
+/* General Body Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Playwrite IS', serif;
+    background-image: url('Snow Wonder.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    color: rgb(0, 0, 0); /* Ensures text is white and readable */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+        font-family: 'Playwrite IS', serif;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    background-attachment: fixed; /* Add this line */
+    background-position: center; /* Add this line */
+    filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (0.5) for transparency */
+    z-index: -1;
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(224, 255, 255, 0.7); /* Semi-transparent light cyan */
+    color: #0070FF;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* Navigation Styles */
+/* Navigation Styles */
+nav {
+    font-family: 'Playwrite IS', serif;
+    display: flex;
+    position: relative;
+    justify-content: space-between; /* Change this from space-between to flex-start */
+    align-items: center;
+    background-image: url('ElectricBlueGuitar.png');
+    background-size: cover;
+    background-position: center;
+    padding: 15px;
+}
+/* Add or modify these styles */
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-image {
+    height: 50px; /* Adjust this value to fit your design */
+    width: auto;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.navigation-links {
+    margin-left: auto; /* This will push the navigation links to the right */
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+nav a {
+    font-family: 'Playwrite IS', serif;
+    margin: 0 20px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+nav a:hover {
+    color: #FFD700;
+}
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.intro h2 {
+    text-align: center;
+    width: 100%;
+}
+
+.narrow-paragraph {
+    max-width: 1200px; /* Adjust this value to your preferred width */
+    width: 100%;
+    margin: 0 auto 20px;
+}
+
+.narrow-paragraph p {
+    text-align: justify;
+    line-height: 1.6;
+}
+.home-page {
+    background-image: url('Snow Wonder.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* YouTube Player Styles */
+.youtube-player {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Social Media Styles */
+.social-links, .social-media {
+    margin-right: 20px;
+    justify-content: center;
+    display: flex;
+}
+
+.social-links a, .social-media a {
+    margin: 0 20px;
+    color: #f6f7f7;
+    font-size: 24px;
+}
+
+.social-links a:hover, .social-media a:hover {
+    color: #FFD700;
+}
+
+/* Container Styles */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.content-wrapper {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+h2 {
+    color: #0b0a09;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Gallery Styles */
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.gallery-item .image img {
+    width: 550px;
+    height: 550px;
+    object-fit: cover;
+}
+
+.image, .text {
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Spotify Button Styles */
+.spotify-button {
+    background-color: #040404;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.spotify-button:hover {
+    background-color: #1ED760;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.spotify-button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* YouTube Button Styles */
+.youtube-button {
+    background-color: #0a0909;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.youtube-button:hover {
+    background-color: #E62117;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.youtube-button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* Hamburger Menu Styles */
+.menu-toggle {
+    display: none;
+}
+
+.navigation-links {
+    display: flex;
+}
+
+/* Mobile-specific Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px 0;
+    }
+
+    .menu-toggle input {
+        display: block;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: #FFF8DC;
+        transition: all 0.3s ease;
+    }
+
+    .menu-toggle input:checked + span {
+        transform: rotate(45deg);
+    }
+
+    .menu-toggle input:checked ~ span {
+        transform: rotate(-45deg);
+    }
+
+    .menu-toggle input:checked ~ .navigation-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navigation-links a {
+        padding: 10px;
+        width: 100%;
+        margin-left: 20px;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+}
+.release-info {
+    margin-top: 20px;
+    color: #333; /* Adjust this color to ensure contrast with your background */
+}
+
+.release-info h2 {
+    margin-bottom: 10px;
+    color: #000000; /* Or any color that fits your design */
+}
+
+.release-info .description {
+    line-height: 1.6;
+    text-align: center;
+    color: #333; /* Adjust this color to ensure contrast with your background */
+}
+
+.gallery-item {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+/* Footer Styles */
+footer {
+    flex-shrink: 0;
+    background-color: #0070FF;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
