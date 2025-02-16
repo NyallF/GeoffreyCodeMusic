@@ -14,31 +14,23 @@
     <body class="home-page">
         <nav>
             <div class="nav-left">
-                <div class="social-links">
-                    <a href="https://music.youtube.com/channel/UCGufp0lB-tnAmfnJUA4B-TQ" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://open.spotify.com/artist/6To5YUdrDHjsj6kxJuUbel" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
-                    <a href="https://music.apple.com/us/artist/geoffrey-code/291024386" target="_blank" title="Apple Music"><i class="fab fa-apple"></i></a>
-                </div>
-                <h1><a href="Index.html">Geoffrey Code Music</a></h1>
+                <!-- Your logo and other left-side content -->
             </div>
             
             <div class="nav-right">
-                <!-- Navigation Links -->
                 <div class="navigation-links">
                     <a href="New Releases.html">New Releases</a>
                     <a href="Dicography.html">Discography</a>
                 </div>
                 
-                <!-- Hamburger Icon -->
                 <div class="menu-toggle">
-                    <input type="checkbox" />
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
             </div>
         </nav>
-        </header>
+        </div>
 
         <main>
             <section class="intro">
@@ -62,12 +54,15 @@
         <footer>
             <p>&copy; 2025 Geoffrey Code. All rights reserved.</p>
         </footer>
-    </div>
-
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.navigation-links').classList.toggle('active');
-        });
-    </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navigationLinks = document.querySelector('.navigation-links');
+        
+                menuToggle.addEventListener('click', function() {
+                    navigationLinks.classList.toggle('active');
+                });
+            });
+        </script>
 </body>
 </html>
