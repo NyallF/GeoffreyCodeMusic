@@ -1,261 +1,392 @@
 /* General Body Styles */
-body {
-    font-family: 'Playwrite IS', serif; /* Apply the new font to the body */
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #E0FFFF; /* Light cyan background as a soft contrast to electric blue */
+}
+
+body {
+    font-family: 'Playwrite IS', serif;
+    background-image: url('Snow Wonder.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    color: rgb(0, 0, 0); /* Ensures text is white and readable */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+        font-family: 'Playwrite IS', serif;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    background-attachment: fixed; /* Add this line */
+    background-position: center; /* Add this line */
+    filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (0.5) for transparency */
+    z-index: -1;
 }
 
 /* Header Styles */
 header {
-    background-color: #E0FFFF; /* Electric blue background */
-    color: #0070FF; /* White text for contrast */
+    background-color: rgba(224, 255, 255, 0.7); /* Semi-transparent light cyan */
+    color: #0070FF;
     padding: 10px 20px;
-    text-align: center; /* Centers header text */
+    text-align: center;
     margin-top: 10px;
     margin-bottom: 5px;
 }
 
 /* Navigation Styles */
+/* Navigation Styles */
 nav {
+    font-family: 'Playwrite IS', serif;
     display: flex;
-    justify-content: center; /* Centers nav items horizontally */
-    align-items: center; /* Center vertically */
-    background-color: #0070FF; /* Electric blue background */
+    position: relative;
+    justify-content: space-between; /* Change this from space-between to flex-start */
+    align-items: center;
+    background-image: url('ElectricBlueGuitar.png');
+    background-size: cover;
+    background-position: center;
     padding: 15px;
+}
+/* Add or modify these styles */
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-image {
+    height: 50px; /* Adjust this value to fit your design */
+    width: auto;
 }
 
 nav h1 {
     margin: 0;
-    font-size: 24px; /* Header size */
-    color: #FFFFFF; /* White text for visibility */
-    flex-grow: 1; /* Push h1 to the left */
-    text-align: center; /* Center the title */
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.navigation-links {
+    margin-left: auto; /* This will push the navigation links to the right */
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
 }
 
 nav a {
-    margin: 0 20px; /* Spacing around links */
+    font-family: 'Playwrite IS', serif;
+    margin: 0 20px;
     text-decoration: none;
-    color: #FFFFFF; /* White link color */
-    font-weight: bold; /* Bold text */
-    font-size: 18px; /* Link font size */
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 18px;
     text-align: center;
 }
 
 nav a:hover {
-    color: #FFD700; /* Golden Yellow on hover */
+    color: #FFD700;
+}
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
+.intro h2 {
+    text-align: center;
+    width: 100%;
+}
+
+.narrow-paragraph {
+    max-width: 1200px; /* Adjust this value to your preferred width */
+    width: 100%;
+    margin: 0 auto 20px;
+}
+
+.narrow-paragraph p {
+    text-align: justify;
+    line-height: 1.6;
+}
+.home-page {
+    background-image: url('Snow Wonder.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* YouTube Player Styles */
+.youtube-player {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 /* Social Media Styles */
 .social-links, .social-media {
+    margin-right: 20px;
     justify-content: center;
-    display: flex; /* Ensures icons are flex items to center them */
+    display: flex;
 }
 
 .social-links a, .social-media a {
-    margin: 0 10px; /* Spacing around social icons */
-    color: #f6f7f7; /* Cornsilk */
-    font-size: 24px; /* Icon size */
+    margin: 0 20px;
+    color: #f6f7f7;
+    font-size: 24px;
 }
 
 .social-links a:hover, .social-media a:hover {
-    color: #FFD700; /* Golden Yellow on hover */
+    color: #FFD700;
 }
 
 /* Container Styles */
 .container {
     max-width: 800px;
-    margin: 20px auto; /* Center the container */
+    margin: 20px auto;
     padding: 20px;
     background: white;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Centers all text within the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.content-wrapper {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 h2 {
-    color: #0b0a09; /* SaddleBrown */
-    margin-top: 20px; /* Space above headings */
-    text-align: center; /* Centers header 2 */
+    color: #0b0a09;
+    margin-top: 20px;
+    text-align: center;
 }
 
 /* Gallery Styles */
 .gallery-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the gallery items vertically */
-    margin-top: 30px; /* Center the gallery
+    align-items: center;
+    margin-top: 30px;
 }
 
 .gallery-item {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center gallery items */
+    align-items: center;
     margin-bottom: 30px;
-    text-align: center; /* Centers text inside the text div */
-    /* Existing styles... */
-/* Add new styles below */
-
-.gallery-item .image img {
-    width: 550px;  /* Example width */
-    height: 550px; /* Example height */
-    object-fit: cover; /* Ensures images cover the area neatly */
+    text-align: center;
 }
 
+.gallery-item .image img {
+    width: 550px;
+    height: 550px;
+    object-fit: cover;
 }
 
 .image, .text {
-    text-align: center; /* Centers content inside image and text divs */
+    text-align: center;
 }
 
 img {
     display: block;
-    margin: auto; /* Centers images horizontally */
-    max-width: 100%; /* Ensures images are responsive */
+    margin: auto;
+    max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
+
 /* Spotify Button Styles */
 .spotify-button {
-    background-color: #040404; /* Spotify brand green */
-    color: white; /* Text color */
-    padding: 10px 20px; /* Padding around the text */
-    border-radius: 20px; /* Rounded corners for the button */
-    text-decoration: none; /* Removes underline from links */
-    display: inline-flex; /* Aligns icon and text inline */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    font-weight: bold; /* Makes text bold */
-    font-size: 16px; /* Text size */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
-    margin-top: 30px; /*
-    margin-bottom: 30px; /* Space below the button */
+    background-color: #040404;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
     margin-bottom: 30px;
-
 }
 
 .spotify-button:hover {
-    background-color: #1ED760; /* Lighter green on hover */
+    background-color: #1ED760;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.spotify-button img { /* Spotify logo adjustments */
-    width: 24px; /* Logo width */
-    height: 24px; /* Logo height */
-    margin-right: 10px; /* Space between logo and text */
+.spotify-button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
 }
 
 /* YouTube Button Styles */
 .youtube-button {
-    background-color: #0a0909; /* YouTube brand red */
-    color: white; /* Text color */
-    padding: 10px 20px; /* Padding around the text */
-    border-radius: 20px; /* Rounded corners for the button */
-    text-decoration: none; /* Removes underline from links */
-    display: inline-flex; /* Aligns icon and text inline */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    font-weight: bold; /* Makes text bold */
-    font-size: 16px; /* Text size */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    background-color: #0a0909;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .youtube-button:hover {
-    background-color: #E62117; /* Darker red on hover */
+    background-color: #E62117;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.youtube-button img { /* YouTube logo adjustments */
-    width: 24px; /* Logo width */
-    height: 24px; /* Logo height */
-    margin-right: 10px; /* Space between logo and text */
+.youtube-button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
 }
-/* Existing styles remain unchanged to ensure desktop layout is not affected */
 
 /* Hamburger Menu Styles */
 .menu-toggle {
-    display: none; /* Hide by default */
+    display: none;
 }
 
-/* Navigation Links - visible by default */
 .navigation-links {
-    display: flex;
+    display: block;
 }
 
 /* Mobile-specific Styles */
 @media (max-width: 768px) {
-    /* Show the hamburger menu */
     .menu-toggle {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        background: transparent;
+        border: none;
         cursor: pointer;
-        padding: 10px 0;
-    }
-
-    .menu-toggle input {
-        display: none; /* Hide the actual checkbox */
+        padding: 0;
+        z-index: 10;
     }
 
     .menu-toggle span {
-        display: block;
-        width: 25px;
+        width: 30px;
         height: 3px;
-        margin: 5px auto;
-        background-color: #FFF8DC;
-        transition: all 0.3s ease;
-    }
-
-    .menu-toggle input:checked + span {
-        transform: rotate(45deg); /* Animation for X icon */
-    }
-
-    .menu-toggle input:checked ~ span {
-        transform: rotate(-45deg); /* Animation for X icon */
-    }
-
-    /* Toggle navigation links */
-    .menu-toggle input:checked ~ .navigation-links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        background: #FFF8DC;
+        border-radius: 10px;
+        transition: all 0.3s linear;
+        position: relative;
+        transform-origin: 1px;
     }
 
     .navigation-links {
-        display: none; /* Hide the links by default */
+        position: fixed;
+        top: 0;
+        right: -300px; /* Start off-screen */
+        height: 100vh;
+        width: 300px;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
         flex-direction: column;
-        width: 100%; /* Full width */
-        text-align: center;
+        padding-top: 60px;
+        transition: right 0.3s ease-in-out;
+    }
+
+    .navigation-links.active {
+        right: 0; /* Slide in from the right */
     }
 
     .navigation-links a {
-        padding: 10px; /* More touch-friendly padding */
-        width: 100%; /* Full width links for easier touch */
+        padding: 15px 0;
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-right {
+        position: relative;
     }
 }
-html, body {
-    height: 100%; /* Ensures the full height of the page is used */
-    margin: 0; /* Resets margin */
-    padding: 0; /* Resets padding */
-    display: flex;
-    flex-direction: column; /* Stacks content vertically */
+.release-info {
+    margin-top: 20px;
+    color: #333; /* Adjust this color to ensure contrast with your background */
 }
 
-body {
-    min-height: 100vh; /* Minimum height of 100% of the viewport height */
+.release-info h2 {
+    margin-bottom: 10px;
+    color: #000000; /* Or any color that fits your design */
 }
 
+.release-info .description {
+    line-height: 1.6;
+    text-align: center;
+    color: #333; /* Adjust this color to ensure contrast with your background */
+}
+
+.gallery-item {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+/* Footer Styles */
 footer {
-    margin-top: auto; /* Automatically moves footer to the bottom */
-    background-color: #0070FF; /* Electric blue background */
-    color: #FFFFFF; /* White text for visibility */
-    text-align: center; /* Center text */
-    padding: 10px 0; /* Padding for spacing */
-    width: 100%; /* Full width */
+    flex-shrink: 0;
+    background-color: #0070FF;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
 }
 
 footer p {
-    margin: 0; /* Remove default margin */
-    font-size: 16px; /* Suitable font size */
+    margin: 0;
+    font-size: 16px;
 }
-

@@ -11,51 +11,58 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <div class="social-links">
-            <a href="https://music.youtube.com/channel/UCGufp0lB-tnAmfnJUA4B-TQ" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="https://open.spotify.com/artist/6To5YUdrDHjsj6kxJuUbel" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
-            <a href="https://music.apple.com/us/artist/geoffrey-code/291024386" target="_blank" title="Apple Music"><i class="fab fa-apple"></i></a>
-        </div>
-
-        <h1><a href="Index.html">Geoffrey Code Music</a></h1>
-
-        <div class="menu-toggle">
-            <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <div class="navigation-links">
-            <a href="New Releases.html">New Releases</a>
-            <a href="Dicography.html">Discography</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
-
-    <div class="container">
-        <h1>Smile</h1>
-        <div class="release-item">
-            <div class="gallery-container">
-                <div class="gallery-item">
-                    <div class="image">
-                        <img src="SMile cover actual.png" alt="Album Cover">
-                    </div>
-                    <p>Released on: February 11, 2025</p>
-                    <p>Description of the album, what inspired it, and maybe a bit about what listeners can expect.</p>
+    <div class="content-wrapper">
+        <nav>
+            <div class="nav-left">
+                <div class="social-links">
+                    <a href="https://music.youtube.com/channel/UCGufp0lB-tnAmfnJUA4B-TQ" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://open.spotify.com/artist/6To5YUdrDHjsj6kxJuUbel" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
+                    <a href="https://music.apple.com/us/artist/geoffrey-code/291024386" target="_blank" title="Apple Music"><i class="fab fa-apple"></i></a>
                 </div>
+                <h1><a href="Index.html">Geoffrey Code Music</a></h1>
+            </div>
+            
+            <div class="nav-right">
+                <!-- Hamburger Icon -->
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="navigation-links">
+                    <a href="New Releases.html">New Releases</a>
+                    <a href="Dicography.html">Discography</a>
+                </div>
+            </div>
+        </nav>
 
-                <div class="text">
-                    <a href="https://open.spotify.com/album/1Iv2X79nWQqJ4N8xrSy3c9" target="_blank" class="spotify-button">
-                        <img src="Spotify Logo.png" alt="Spotify Logo"> Listen on Spotify
-                    </a>
-                    <a href="https://music.youtube.com/playlist?list=OLAK5uy_k6S6lfe09MynO7E8ioOTb5QbbK9ouRZeM" target="_blank" class="youtube-button">
-                        <img src="Youtube-Logo-.png" alt="YouTube Logo"> Subscribe on YouTube
-                    </a>
-                    <a href="https://music.apple.com/us/album/slideways/291024382" target="_blank" class="spotify-button">
-                        <img src="Apple Music.jpeg" alt="Apple Music"> Listen on Apple Music
-                    </a>
+        <div class="container">
+            <div class="release-item">
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <div class="image">
+                            <img src="SMile cover actual.png" alt="Album Cover">
+                        </div>
+                        <div class="release-info">
+                            <p><strong>Released on:</strong> February 11, 2025</p>
+                            <h2>Smile</h2>
+                            <p class="description">
+                                A chorus opens this epic piano tune and a rousing coda closes it. Through good times and dark times, beginnings and endings, a crack of light through heavy stormclouds, lazy days spent in bed, the song muses upon the power of a Smile to bring happiness, relief, redemption, renewal.
+                            </p>
+                        </div>
+                    <div class="text">
+                        <a href="https://open.spotify.com/album/1KGcdaL0UPzp70P59I3kPR" target="_blank" class="spotify-button">
+                            <img src="Spotify Logo.png" alt="Spotify Logo"> Listen on Spotify
+                        </a>
+                        <a href="https://music.youtube.com/playlist?list=OLAK5uy_lCA6_Ipe-iMLtVHkXcesHulo5OMVn9kLc" target="_blank" class="youtube-button">
+                            <img src="Youtube-Logo-.png" alt="YouTube Logo"> Subscribe on YouTube
+                        </a>
+                        <a href="https://music.apple.com/ca/album/smile-single/1795990072" target="_blank" class="spotify-button">
+                            <img src="Apple Music.jpeg" alt="Apple Music"> Listen on Apple Music
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -66,3 +73,9 @@
     </footer>
 </body>
 </html>
+<script>
+    document.getElementById('mobile-menu').addEventListener('click', function() {
+        this.classList.toggle('active');
+        document.querySelector('.navigation-links').classList.toggle('active');
+    });
+</script>

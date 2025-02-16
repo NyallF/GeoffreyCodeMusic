@@ -3,58 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geoffrey Code Music</title>
+    <title>Geoffrey Code Music - Discography</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+IS:wght@100;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    
 </head>
 <body>
-
-    <nav>
-        <div class="social-links">
-            <a href="https://music.youtube.com/channel/UCGufp0lB-tnAmfnJUA4B-TQ" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="https://open.spotify.com/artist/6To5YUdrDHjsj6kxJuUbel" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
-            <a href="https://music.apple.com/us/artist/geoffrey-code/291024386" target="_blank" title="Apple Music"><i class="fab fa-apple"></i></a>
+    <body class="home-page">
+        <nav>
+            <div class="nav-left">
+                <!-- Your logo and other left-side content -->
+            </div>
+            
+            <div class="nav-right">
+                <div class="navigation-links">
+                    <a href="New Releases.html">New Releases</a>
+                    <a href="Dicography.html">Discography</a>
+                </div>
+                
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
         </div>
+
+        <main>
+            <section class="intro">
+                <h2>What is the 'Geoffrey' Code?</h2>
+                <div class="narrow-paragraph">
+                    <p>Making Music that sounds like it's from yesterday, today. Congratulations, you've found a diamond in the rough! The Geoffrey Code is the jovial, tasteful, and wholesome music you've been looking for this whole time. Please enjoy the wide selection of pop, blues, Christmas Carols and Folk songs available only through the Geoffrey Code.</p>
+                </div>
+                <div class="narrow-paragraph">
+                    <p>Personally, I have found that the Geoffrey Code has immensely deepened my appreciation not only for the man behind the music, but for all the beauty we have available to us in life, and for the music that came before that inspired it. A beautiful reminder that no matter how grand our accomplishments, we all stand on the shoulders of Giants. -Nyall Code</p>
+                </div>
+            </section>
+
+            <section class="youtube-player">
+                <h2>Listen on YouTube Music</h2>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/x7GFowjqg6k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Geoffrey Code. All rights reserved.</p>
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navigationLinks = document.querySelector('.navigation-links');
         
-        <h1><a href="Index.html">Geoffrey Code Music</a></h1>
-    
-        <!-- Hamburger Icon -->
-        <div class="menu-toggle">
-            <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    
-        <!-- Navigation Links -->
-        <div class="navigation-links">
-            <a href="New Releases.html">New Releases</a>
-            <a href="Dicography.html">Discography</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
-    
-
-    <div class="container">
-        <h2>Upcoming Announcements</h2>
-        <p>Stay tuned for exciting updates on upcoming releases, concerts, and more!</p>
-
-        <h2>About Me</h2>
-        <p>Hello! I'm Geoffrey Code, an independent musician passionate about sharing stories through my music. I blend different genres, including country, folk, and rock, to create a unique sound. Join me in my journey as I explore life and artistry through melodies!</p>
-
-        <div class="youtube-player">
-            <h2>Listen on YouTube Music</h2>
-            <!-- Updated YouTube Music embed link -->
-            <iframe src="https://www.youtube.com/embed/Q79SOjGMK0I" allow="encrypted-media"></iframe>
-        </div>
-    </div>
-    <footer>
-        <p>All rights reserved © Geoffrey Code 2025</p>
-    </footer>
-    
+                menuToggle.addEventListener('click', function() {
+                    navigationLinks.classList.toggle('active');
+                });
+            });
+        </script>
 </body>
 </html>
