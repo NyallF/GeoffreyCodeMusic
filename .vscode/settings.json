@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/27da48e1-e85a-47dc-8b04-9b2ae49ac97e/resourceGroups/GeoffreyCodeWebsite-RG/providers/Microsoft.Web/sites/geoffreycodemusician",
+    "appService.deploySubpath": "."
+}
