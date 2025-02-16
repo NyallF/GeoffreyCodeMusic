@@ -22,18 +22,17 @@
         </div>
         
         <div class="nav-right">
+            <!-- Hamburger Icon -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
             <!-- Navigation Links -->
             <div class="navigation-links">
                 <a href="New Releases.html">New Releases</a>
                 <a href="Dicography.html">Discography</a>
-            </div>
-            
-            <!-- Hamburger Icon -->
-            <div class="menu-toggle">
-                <input type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
             </div>
         </div>
     </nav>
@@ -138,6 +137,13 @@
     
     <footer>
         <p>&copy; 2023 Geoffrey Code Music. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+        <footer>
+    
+        <script>
+            document.getElementById('mobile-menu').addEventListener('click', function() {
+                this.classList.toggle('active');
+                document.querySelector('.navigation-links').classList.toggle('active');
+            });
+        </script>
+    </body>
+    </html>

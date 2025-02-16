@@ -298,7 +298,7 @@ img {
 }
 
 .navigation-links {
-    display: flex;
+    display: block;
 }
 
 /* Mobile-specific Styles */
@@ -306,52 +306,52 @@ img {
     .menu-toggle {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        background: transparent;
+        border: none;
         cursor: pointer;
-        padding: 10px 0;
-    }
-
-    .menu-toggle input {
-        display: block;
+        padding: 0;
+        z-index: 10;
     }
 
     .menu-toggle span {
-        display: block;
-        width: 25px;
+        width: 30px;
         height: 3px;
-        margin: 5px auto;
-        background-color: #FFF8DC;
-        transition: all 0.3s ease;
-    }
-
-    .menu-toggle input:checked + span {
-        transform: rotate(45deg);
-    }
-
-    .menu-toggle input:checked ~ span {
-        transform: rotate(-45deg);
-    }
-
-    .menu-toggle input:checked ~ .navigation-links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        background: #FFF8DC;
+        border-radius: 10px;
+        transition: all 0.3s linear;
+        position: relative;
+        transform-origin: 1px;
     }
 
     .navigation-links {
-        display: none;
+        position: fixed;
+        top: 0;
+        right: -300px; /* Start off-screen */
+        height: 100vh;
+        width: 300px;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
         flex-direction: column;
+        padding-top: 60px;
+        transition: right 0.3s ease-in-out;
+    }
+
+    .navigation-links.active {
+        right: 0; /* Slide in from the right */
+    }
+
+    .navigation-links a {
+        padding: 15px 0;
+        margin: 5px 0;
         width: 100%;
         text-align: center;
     }
 
-    .navigation-links a {
-        padding: 10px;
-        width: 100%;
-        margin-left: 20px;
-        color: #FFFFFF;
-        text-decoration: none;
+    .nav-right {
+        position: relative;
     }
 }
 .release-info {
